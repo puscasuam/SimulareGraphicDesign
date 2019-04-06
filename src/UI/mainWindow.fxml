@@ -1,0 +1,50 @@
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+
+<HBox fx:controller="UI.MainController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <VBox>
+        <TableView fx:id="tblInvoice" editable="true">
+            <columns>
+                <TableColumn fx:id="colIdInvoice" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="colValue" text="Invoice value">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="value" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="colDescription" text="Description">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="colDate" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+
+            </columns>
+        </TableView>
+        <TextField fx:id="txtId" promptText="ID"/>
+        <TextField fx:id="txtValue" promptText="Value"/>
+        <TextField fx:id="txtDescription" promptText="Description"/>
+        <TextField fx:id="txtDate" promptText="Date"/>
+
+        <Button fx:id="btnAddInvoice" text="Add Invoice" onAction="#btnAddInvoiceClick"/>
+    </VBox>
+
+</HBox>
