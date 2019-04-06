@@ -3,7 +3,9 @@ package Service;
 import Domain.Invoice;
 import Repository.InvoiceRepository;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InvoiceService {
     private InvoiceRepository repository;
@@ -28,5 +30,10 @@ public class InvoiceService {
     public List<Invoice> getAll() {
         return repository.getAll();
     }
+
+
+
+
+
 
 }
